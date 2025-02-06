@@ -101,10 +101,7 @@ export default function MovieDetails({
               </p>
               <p>{genre}</p>
               <p>
-                <span role="img" aria-label="star">
-                  ⭐
-                </span>{" "}
-                {imdbRating} IMDb rating
+                <span>⭐</span> {imdbRating} IMDb rating
               </p>
             </div>
           </header>
@@ -118,6 +115,7 @@ export default function MovieDetails({
                     size={24}
                     onSetRating={setUserRating}
                   />
+
                   {userRating > 0 && (
                     <button className="btn-add" onClick={handleAdd}>
                       + Add to List
@@ -126,10 +124,7 @@ export default function MovieDetails({
                 </>
               ) : (
                 <p>
-                  You rated this movie {watchedUserRating}{" "}
-                  <span role="img" aria-label="star">
-                    ⭐
-                  </span>
+                  You rated this movie {watchedUserRating} <span>⭐</span>
                 </p>
               )}
             </div>

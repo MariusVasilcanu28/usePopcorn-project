@@ -2,12 +2,13 @@
 import { useRef } from "react";
 import { useKey } from "../hooks/useKey";
 
-export default function Search({ query, setQuery }) {
+export default function Search({ query, setQuery, onCloseMovie }) {
   const inputEl = useRef(null);
 
   useKey("Enter", function () {
     if (document.activeElement === inputEl.current) return;
     inputEl.current.focus();
+    onCloseMovie();
     setQuery("");
   });
 

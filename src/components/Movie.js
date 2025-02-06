@@ -6,10 +6,8 @@ export default function Movie({ movie, onSelectedMovie }) {
       <h3>{movie.Title}</h3>
       <div>
         <p>
-          <span role="img" aria-label="calendar">
-            📆
-          </span>
-          {movie.Year}
+          <span>📆</span>
+          <span>{movie.Year}</span>
         </p>
       </div>
     </li>

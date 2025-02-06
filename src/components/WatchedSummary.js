@@ -13,28 +13,20 @@ export default function WatchedSummary({ watched }) {
       <h2>Movies you watched</h2>
       <div>
         <p>
-          <span role="img" aria-label="number">
-            #️⃣
-          </span>{" "}
-          {watched.length} movies
+          <span>#️⃣</span>
+          <span>{watched.length} movies</span>
         </p>
         <p>
-          <span role="img" aria-label="imdb">
-            ⭐️
-          </span>{" "}
-          {avgImdbRating.toFixed(1)}
+          <span>⭐️</span>
+          <span>{avgImdbRating.toFixed(1)}</span>
         </p>
         <p>
-          <span role="img" aria-label="user-rating">
-            🌟
-          </span>{" "}
-          {avgUserRating.toFixed(1)}
+          <span>🌟</span>
+          <span>{avgUserRating.toFixed(1)}</span>
         </p>
         <p>
-          <span role="img" aria-label="runtime">
-            ⏳
-          </span>{" "}
-          {avgRuntime} min
+          <span>⏳</span>
+          <span>{avgRuntime} min</span>
         </p>
       </div>
     </div>

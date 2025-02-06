@@ -2,36 +2,29 @@
 export default function WatchedMovie({ movie, onDeleteWatched }) {
   return (
     <li>
-      <img src={movie.poster} alt={`${movie.title} poster`} width="50" />
+      <img src={movie.poster} alt={`${movie.title} poster`} />
+      <h3>{movie.title}</h3>
       <div>
-        <h3>{movie.title}</h3>
-        <div>
-          <p>
-            <span role="img" aria-label="imdb">
-              ⭐️
-            </span>{" "}
-            {movie.imdbRating}
-          </p>
-          <p>
-            <span role="img" aria-label="user-rating">
-              🌟
-            </span>{" "}
-            {movie.userRating}
-          </p>
-          <p>
-            <span role="img" aria-label="runtime">
-              ⏳
-            </span>{" "}
-            {movie.runtime} min
-          </p>
-        </div>
+        <p>
+          <span>⭐️</span>
+          <span>{movie.imdbRating}</span>
+        </p>
+        <p>
+          <span>🌟</span>
+          <span>{movie.userRating}</span>
+        </p>
+        <p>
+          <span>⏳</span>
+          <span>{movie.runtime} min</span>
+        </p>
+
+        <button
+          className="btn-delete"
+          onClick={() => onDeleteWatched(movie.imdbID)}
+        >
+          X
+        </button>
       </div>
-      <button
-        className="btn-delete"
-        onClick={() => onDeleteWatched(movie.imdbID)}
-      >
-        X
-      </button>
     </li>
   );
 }
