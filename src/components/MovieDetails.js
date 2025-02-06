@@ -4,8 +4,6 @@ import Loader from "./Loader";
 import StarRating from "./StarRating";
 import { useKey } from "../hooks/useKey";
 
-const KEY = "b920ef47";
-
 export default function MovieDetails({
   selectedId,
   onCloseMovie,

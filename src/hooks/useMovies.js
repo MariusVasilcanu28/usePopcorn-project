@@ -1,8 +1,6 @@
 // src/hooks/useMovies.js
 import { useState, useEffect } from "react";
 
-// const KEY = "b920ef47";
-
 export function useMovies(query) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
