@@ -64,6 +64,10 @@ body {
     row-gap: 1.5rem;
   }
 
+  .logo {
+    padding-top: 0.8rem;
+  }
+
   .search {
     max-width: fit-content;
   }
